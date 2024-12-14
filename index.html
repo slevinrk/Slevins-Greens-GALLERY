@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slevin Green & Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        
+        <div class="logo" style="text-align: center;">
+            <img src="SGGlogo.jpeg" alt="Slevin Green & Gallery Logo" style="width: 150px;">
+            <h1 style="font-size: 24px; margin-top: 10px;">Slevins Greens & Gallery</h1>
+        </div>
+        <p>A creative sanctuary for plant and art lovers</p>
+    </header>
+    <main>
+        <section id="about-us">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="IMG_6014.jpeg" alt="Joey and Rye Slevin" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
+                <p>Joey and Rye Slevin are passionate about plants and making art. They are proud to be LGBTQIA+ friendly and love creating beautiful things, caring for plants, and teaching people how to nurture them.</p>
+            </div>
+        </section>
+
+        
+
+        <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <span class="slide-number">1 / 10</span>
+            <img src="IMG_6010.jpeg" alt="Variegated Monstera" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <span class="slide-number">2 / 10</span>
+            <img src="75584761808__FB0D2443-E6BC-4F39-9F66-E7DF9D6A1D8A.jpeg" alt="Whimsical Animal Art" style="width:40%; border-radius: 15px; margin: auto;">
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+            <span class="slide-number">3 / 10</span>
+            <img src="IMG_6011.jpeg" alt="Bromeliad and Monstera" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 4 -->
+        <div class="slide">
+            <span class="slide-number">4 / 10</span>
+            <img src="75584763552__19A2128C-D218-4AF8-A987-2B471C299B31.jpeg" alt="Spooky Black and White Art" style="width:40%; border-radius: 15px; margin: auto;">
+        </div>
+        <!-- Slide 5 -->
+        <div class="slide">
+            <span class="slide-number">5 / 10</span>
+            <img src="IMG_6012.jpeg" alt="Cozy Cat Scene" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 6 -->
+        <div class="slide">
+            <span class="slide-number">6 / 10</span>
+            <img src="IMG_6024.jpg" alt="Hollywood in a Bottle Art" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 7 -->
+        <div class="slide">
+            <span class="slide-number">7 / 10</span>
+            <img src="IMG_6013.jpeg" alt="Succulent Collection" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 8 -->
+        <div class="slide">
+            <span class="slide-number">8 / 10</span>
+            <img src="IMG_6025.jpg" alt="Fantasy Battle Art" style="width: 40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 9 -->
+        <div class="slide">
+            <span class="slide-number">9 / 10</span>
+            <img src="IMG_6009.jpeg" alt="Orchid in Bloom" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+        <!-- Slide 10 -->
+        <div class="slide">
+            <span class="slide-number">10 / 10</span>
+            <img src="IMG_6022.jpg" alt="Princess with Flask Art" style="width:40%; border-radius: 75px; margin: auto;">
+        </div>
+
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="plusSlides(-1)" style="position: absolute; left: 170px; top: 210%; transform: translateY(-50%); font-size: 24px; text-decoration: none; color: #4CAF50; background: #fff; border-radius: 50%; padding: 5px; box-shadow: 0px 2px 4px rgba(0,0,0,0.1);">&#9664;</a>
+        <a class="next" onclick="plusSlides(1)" style="position: absolute; right: 170px; top: 210%; transform: translateY(-50%); font-size: 24px; text-decoration: none; color: #4CAF50; background: #fff; border-radius: 50%; padding: 5px; box-shadow: 0px 2px 4px rgba(0,0,0,0.1);">&#9654;</a>
+    </div>
+    <br>
+    <!-- Dots for Navigation -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+        <span class="dot" onclick="currentSlide(6)"></span>
+        <span class="dot" onclick="currentSlide(7)"></span>
+        <span class="dot" onclick="currentSlide(8)"></span>
+        <span class="dot" onclick="currentSlide(9)"></span>
+        <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+</section>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+        
+        <section id="shop">
+    <h2>Shop with Us</h2>
+    <p>Shop with us at these two websites: <a href="https://www.etsy.com" target="_blank">Etsy</a> and <a href="https://www.fiverr.com" target="_blank">Fiverr</a>! We have so many opportunities to grow and learn together, and I’m excited to see what we can gain.</p>
+</section>
+<footer>
+            <p>&copy; 2024 Slevin Green & Gallery. All rights reserved.</p>
+            <div>
+                </footer>
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCartIcon();
+
+            const addToCartButton = document.getElementById('add-to-cart');
+            addToCartButton.addEventListener('click', () => {
+                const dateInput = document.getElementById('date');
+                const date = dateInput.value;
+                const today = new Date().toISOString().split('T')[0];
+
+                if (!date || date < today) {
+                    alert('Please select a valid date.');
+                    return;
+                }
+
+                const zoomOptions = document.getElementsByName('zoomOption');
+                let selectedOption = null;
+                let price = 0;
+
+                for (const option of zoomOptions) {
+                    if (option.checked) {
+                        selectedOption = option.value;
+                        price = option.value === '30min' ? 15 : 25;
+                        break;
+                    }
+                }
+
+                if (!selectedOption) {
+                    alert('Please select a time option (30 Minutes or 1 Hour).');
+                    return;
+                }
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ productName: 'Plant Zoom Call', date, option: selectedOption, price });
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`Plant Zoom Call (${selectedOption}) on ${date} has been added to your cart!`);
+                updateCartIcon();
+                window.location.href = 'cart.html';
+            });
+
+            const addHourSessionButton = document.getElementById('add-hour-session');
+            addHourSessionButton.addEventListener('click', () => {
+                const today = new Date().toISOString().split('T')[0];
+                const date = prompt("Enter a date for your session (YYYY-MM-DD):", today);
+
+                if (!date || date < today) {
+                    alert('Please enter a valid date in the future.');
+                    return;
+                }
+
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ productName: '1 Hour Zoom Call', date, option: '1hour', price: 25 });
+                localStorage.setItem('cart', JSON.stringify(cart));
+
+                alert(`1 Hour Zoom Call on ${date} has been added to your cart!`);
+                updateCartIcon();
+                window.location.href = 'cart.html';
+            });
+        });
+
+        function updateCartIcon() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartCount = document.getElementById('cart-count');
+            if (cart.length > 0) {
+                cartCount.textContent = cart.length;
+                cartCount.style.display = 'inline-block';
+            } else {
+                cartCount.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
