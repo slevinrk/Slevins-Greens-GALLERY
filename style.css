@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f9d423, #ff4e50, #6a994e); /* Vibrant gradient background */
+    color: #3e403f; /* Neutral dark gray text */
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #6a994e, #386641); /* Gradient green tones */
+    color: #f4f0ec; /* Off-white for text */
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 3px solid #a7c957; /* Subtle light green accent */
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+<section id="about">
+    <h2>🌞 About Us 🌿</h2>
+    <div class="about-image-container">
+        <img src="IMG_6014.jpeg" alt="Joey and Rye Slevin" class="about-image">
+    </div>
+    <p>🏳️‍🌈 Joey and Rye Slevin are passionate about blending their love for plants and art to create stunning, meaningful works. 🌸</p>
+    <p>🌻 As a proudly LGBTQIA+ friendly space, they are dedicated to fostering inclusivity and creativity. 🌟</p>
+    <p>🌱 They take immense joy in caring for plants, crafting beautiful pieces, and teaching others how to embrace the art of nature. 🌺</p>
+</section>
+
+/* Navigation */
+nav {
+    background-color: #386641; /* Deep green */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #f4f0ec; /* Off-white */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    background-color: #6a994e; /* Forest green */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #a7c957; /* Light green */
+    color: #3e403f; /* Neutral text */
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9); /* Transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: #6a994e; /* Forest green */
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1rem;
+    color: #3e403f;
+}
+
+/* About Us Image Container */
+.about-image-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+/* Circular About Us Image */
+.about-image {
+    width: 250px; /* Set image size */
+    height: 250px; /* Match height to width for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image fits well inside the circle */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Cards */
+.product {
+    border: 1px solid #d9cab3; /* Light brown border */
+    border-radius: 10px;
+    padding: 15px;
+    background: #f4f0ec; /* Soft beige */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    font-size: 1.3rem;
+    color: #6a994e; /* Forest green */
+}
+
+.product button {
+    background-color: #386641; /* Deep green */
+    color: #f4f0ec; /* Off-white */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #a7c957; /* Light green */
+    color: #3e403f; /* Neutral text */
+}
+
+/* Footer */
+footer {
+    background-color: #3e403f; /* Dark gray */
+    color: #f4f0ec; /* Off-white */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 3px solid #6a994e; /* Forest green accent */
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
